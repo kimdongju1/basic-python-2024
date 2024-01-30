@@ -92,7 +92,7 @@ print(99 in std) # True
 print(98 in std) # False
 
 # reverse(), copy(), count() ... 
-# *리스트 : 전개연산자
+# *리스트 : 전개연산자 - 몰라도 됨 
 list_a = [1,3,5]
 list_b = [2,4,8]
 list_c = [*list_a, *list_b]
