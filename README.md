@@ -66,7 +66,43 @@
         - 캡슐화 (__plateNumber)
     - 패키지, 모듈
     
+## 4일차 
+- 파이썬 기초
+     - 패키지, 모듈 계속
+        - pip 사용
 
+        ```shell
+        > pip --version # 버젼 확인
+        > pip list # 현재 설치된 라이브러리 목록 확인 
+        > pip install 패키지 명 # 패키지를 내 컴퓨터에 설치
+        > pip uninstall 패키지 명 # 패키지를 삭제
+        ```
+     - 예외 처리 : 비정상적인 프로그램종료 막기
+
+     ```python
+    def divide(x, y):
+        try:
+            return x / y # ZeroDivisionError 발생
+        except ZeroDivisionError as e:
+            print('[오류] 제수는 0이 될수 없습니다. ')
+            return 0
+     ```
+     - 텍스트 파일 입출력
+     - 파이썬 활용 
+    - 주피터 노트북
+    
+
+
+
+
+
+
+
+
+
+
+
+    - 가상환경
     - 객체지향(나중에...)
         - 오버로딩, 오버라이딩(재정의)
         - 상속, 다중상속
