@@ -84,7 +84,7 @@
         try:
             return x / y # ZeroDivisionError 발생
         except ZeroDivisionError as e:
-            print('[오류] 제수는 0이 될수 없습니다. ')
+            print('[오류!!] 제수는 0이 될수 없습니다. ')
             return 0
      ```
      - 텍스트 파일 입출력
@@ -98,15 +98,16 @@
     ```
 - 파이썬 활용 
     - 주피터 노트북
+        - Ctrl + Shift + P (명령팔레트) 로 시작 
+        - 사용방법 (test31_jupyternb. 참조)
+    - folium 기본사용 
+    ![folium사용법](https://raw.githubusercontent.com/kimdongju1/basic-python-2024/main/images/python_001.png)
     
 
 
-
-
-
-
-
-
+## 5일차
+- 파이썬 응용
+    - 주피터 노트북 활용 - 구글 코랩(Colab)
 
 
 
