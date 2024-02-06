@@ -7,7 +7,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-class qtwin_exam(QWidget): 
+class qtwin_exam(QWidget): # 상속 
     def __init__(self) -> None:
         super().__init__()
         uic.loadUi('./day06/TestApp.ui', self) # QtDesigner에서 만든 ui를 로드
@@ -24,7 +24,9 @@ class qtwin_exam(QWidget):
         print('Click the Stop Button')
         self.lblStatus.setText('Status : Stop')
 
-    def closeEvent(self, QCloseEvent) -> None: # X버튼 종료 확인 
+    # QWidget에 있는 closeEvent를 그대로쓰면 그냥 닫힘
+    # 닫을지 말지를 한번더 물어보는 형태로 다시 구현하고 싶음(재정의 : Override)
+    def closeEvent(self, QCloseEvent) -> None: # X버튼 종료 확인(재정의 : ) 
         re = QMessageBox.question(self, '종료확인', '종료할래?', QMessageBox.Yes|QMessageBox.No)
         if re == QMessageBox.Yes: #닫기
             QCloseEvent.accept()

@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QCloseEvent, QPainter, QColor, QFont
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
 
-class qtwin_exam(QWidget):
+class qtwin_exam(QWidget): 
     def __init__(self) -> None:
         super().__init__()
         self.initUI()
@@ -22,7 +22,8 @@ class qtwin_exam(QWidget):
 
     def btn01_clicked(self):
         QMessageBox.about(self, '버튼클릭', '버튼이 클릭했습니다!')
-        
+    
+    # 부모의 closeEvent는 그냥 닫히기 때문에 여기서 재정의해서 구현함(Override)
     def closeEvent(self, QCloseEvent) -> None:
         re = QMessageBox.question(self, '종료확인', '종료할래?', QMessageBox.Yes|QMessageBox.No)
         if re == QMessageBox.Yes: #닫기
