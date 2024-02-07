@@ -34,10 +34,10 @@ class WinApp(QWidget):
         self.setCenter()
     
     def initSignal(self): # 동작초기화
-        self.btn_black.clicked.connect(self.ButtonClicked)
-        self.btn_red.clicked.connect(self.ButtonClicked)
-        self.btn_blue.clicked.connect(self.ButtonClicked)
-        self.btn_clear.clicked.connect(self.ButtonClicked)
+        self.btn_black.clicked.connect(self.buttonClicked)
+        self.btn_red.clicked.connect(self.buttonClicked)
+        self.btn_blue.clicked.connect(self.buttonClicked)
+        self.btn_clear.clicked.connect(self.buttonClicked)
         # 2024-02-06 이미지로드 및 저장버튼 추가 
         self.btn_load.clicked.connect(self.btnLoadClicked)
         self.btn_save.clicked.connect(self.btnSaveClicked)
@@ -56,7 +56,7 @@ class WinApp(QWidget):
         pixmap = self.lb_canvas.pixmap()
         pixmap.save(filePath)
 
-    def ButtonClicked(self): # black, red, blue를 다 통일한 함수
+    def buttonClicked(self): # black, red, blue를 다 통일한 함수
         btn_val = self.sender().objectName()
         print(btn_val)
         if btn_val == 'btn_black': # 검은 버튼 클릭

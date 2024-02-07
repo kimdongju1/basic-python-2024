@@ -17,3 +17,4 @@ res2 = requests.get('https://www.naver.com/')
 
 print(res2.status_code)
 print(res2.text)
+
